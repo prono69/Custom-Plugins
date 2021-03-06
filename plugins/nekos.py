@@ -1,7 +1,6 @@
 import nekos
- 
+import random
 from userge import Message, userge
-from userge.utils import rand_array
  
 NSFW = [
     "feet",
@@ -122,3 +121,8 @@ async def neko_life(message: Message):
             chat_id=message.chat.id, photo=link, reply_to_message_id=reply_id
         )
  
+ 
+def rand_array(array):
+    random_num = random.choice(array) 
+    return (str(random_num))
+  
